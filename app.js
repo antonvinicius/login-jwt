@@ -9,6 +9,10 @@ const adminRouter = require("./routes/adminRouter");
 app.use("/user", express.json(), userRouter);
 app.use("/admin", adminRouter);
 
+app._router("/", (req, res) => {
+  res.send("test");
+});
+
 app.listen(process.env.PORT, () => {
   console.log("listening on port " + process.env.PORT);
 });

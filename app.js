@@ -9,7 +9,7 @@ const adminRouter = require("./routes/adminRouter");
 app.use("/user", express.json(), userRouter);
 app.use("/admin", adminRouter);
 
-app._router("/", (req, res) => {
+app.get("/test", (req, res) => {
   res.send("test");
 });
 
